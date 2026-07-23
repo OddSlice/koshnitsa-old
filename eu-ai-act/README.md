@@ -1,52 +1,46 @@
 # EU AI Act Readiness — Progress AI Observability
 
-A single-page marketing site: **"Are Your AI Agents Ready for the EU AI Act?"**
+Single-page site: **"Are Your AI Agents Ready for the EU AI Act?"**
 
-The page presents how Progress AI Observability can support EU AI Act readiness
-(agent tracing, evaluations, production monitoring, EU data residency). All copy
-comes from the supplied content brief; the visual design is modeled on the
-[Progress Telerik](https://www.telerik.com/ai-observability-platform) marketing
-system.
+The page is built **on Telerik's own design system** so it reads as part of
+telerik.com: it reuses Telerik's real header/ribbon, footer, stylesheets and the
+Metric brand font, and lays the EU AI Act content out with Telerik's own
+component and utility classes (`Section`, `container`, `row`/`col-*`, `Card`,
+`Btn Btn--prim2`, `u-tint-blue4`, `u-ff-title`, …). All copy comes from the
+supplied content brief.
 
-## Design system
+## How it's structured
 
-Reverse-engineered from the Telerik AI Observability page:
+- `index.html` — Telerik head + ribbon + nav, the EU AI Act body sections, and
+  Telerik's footer.
+- `assets/` — Telerik's stylesheets (`style.css`, `index.min.css`, `kendo.css`,
+  `metric.min.css`, prism), page imagery (hero diagonal, icons, prefooter
+  banner), and `custom.css` — a small supplemental sheet (timeline, chips, FAQ
+  accordion, crosswalk table) in the Telerik palette for the few patterns
+  Telerik has no ready component for.
 
-| Token | Value |
-|---|---|
-| Primary | `#054bff` (Progress blue) |
-| Primary hover | `#003bd0` |
-| Accent | `#eb0249` (magenta) |
-| Text / ink | `#383f55`, secondary `#5f6977` |
-| Section tints | `#f6fbff`, `#edf4ff`, `#dcecff` |
-| Deep navy | `#001f4b` / `#151950` |
-| Typography | Inter (Metric substitute), display headings up to 75px |
-| Buttons | Pill, soft shadow `0 10px 22px rgba(7,12,39,.16)` |
-| Container | max-width 1230px |
+## Fonts & shared icons
 
-## Files
+The **Metric** brand font and Telerik's shared icon set load from Telerik's
+public CDN (`d6vtbcy3ong79.cloudfront.net`), referenced by the bundled CSS. They
+render whenever the page is served with internet access (any real host). In a
+sandbox with no outbound access they fall back to a system sans; deploy to see
+the true Metric typography.
 
-- `index.html` — the full page (semantic sections: hero, quick answer, timeline,
-  audience, four capability jobs, differentiation, crosswalk, scope/roadmap, FAQ,
-  final CTA, sources, footer).
-- `styles.css` — the complete stylesheet (no build step, no framework).
-
-No dependencies or build tooling — it is a static site. Inter is loaded from
-Google Fonts; everything else is self-contained.
-
-## Run locally
-
-Open `index.html` in a browser, or serve the folder:
+## Run / deploy
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
-## Deploy
+Any static host works (Netlify Drop, `npx vercel`, GitHub Pages, S3).
 
-Any static host works (GitHub Pages, Netlify, Vercel, S3). For GitHub Pages,
-enable Pages on the repository and point it at the branch root.
+## Sections
+
+Hero · quick answer · staged timeline · high-risk audience · four
+Article-mapped capability cards · differentiation · Article 9–72 crosswalk ·
+scope vs roadmap (kept visually separate) · FAQ · prefooter CTA · official
+sources · Telerik footer.
 
 > This page describes technical capabilities that may support selected EU AI Act
 > readiness activities. It is not legal advice.

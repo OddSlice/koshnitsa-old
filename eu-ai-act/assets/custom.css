@@ -1,0 +1,88 @@
+/* Supplemental styles for the EU AI Act page — built on the Telerik design
+   system (Metric font + Telerik utility/component classes). Only covers a few
+   patterns Telerik has no ready component for (timeline, chips, FAQ, table),
+   all using the Telerik palette so they read as part of the same page. */
+
+.eu-eyebrow {
+  display: inline-block;
+  font-family: var(--metric-font, Metric, Arial, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 14px;
+  font-weight: 600;
+  color: #054bff;
+  background: #edf4ff;
+  border: 1px solid #dcecff;
+  padding: 7px 16px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+.eu-eyebrow .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#eb0249; margin-right:8px; vertical-align:middle; }
+
+.eu-badges { list-style:none; margin:0 0 20px; padding:0; display:flex; flex-wrap:wrap; gap:10px 28px; }
+.eu-badges li { display:flex; align-items:center; gap:9px; font-family:var(--metric-font,Metric,Arial,sans-serif); font-size:17px; font-weight:500; color:#21242c; }
+.eu-badges .tick { display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%; background:#054bff; color:#fff; font-size:13px; font-weight:700; }
+
+.eu-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
+.eu-chip { font-family:var(--metric-font,Metric,Arial,sans-serif); font-weight:600; font-size:15px; color:#0037cb; background:#f6fbff; border:1px solid #dcecff; padding:8px 16px; border-radius:30px; }
+
+/* "Available today" note */
+.eu-note { margin-top:20px; padding:16px 18px; background:#f6fbff; border:1px solid #dcecff; border-radius:10px; font-size:16px; color:#383f55; }
+.eu-note b { display:inline-flex; align-items:center; gap:8px; text-transform:uppercase; letter-spacing:.06em; font-size:12px; color:#0037cb; margin-right:8px; }
+.eu-note b::before { content:""; width:8px; height:8px; border-radius:50%; background:#01a99d; display:inline-block; }
+
+/* Timeline */
+.eu-timeline { list-style:none; margin:0; padding:0; position:relative; }
+.eu-timeline::before { content:""; position:absolute; left:10px; top:8px; bottom:8px; width:2px; background:linear-gradient(180deg,#dcecff,#054bff 45%,#dcecff); }
+.eu-tl { position:relative; padding:0 0 30px 46px; }
+.eu-tl:last-child { padding-bottom:0; }
+.eu-tl .node { position:absolute; left:1px; top:3px; width:22px; height:22px; border-radius:50%; background:#fff; border:3px solid #90b6ff; }
+.eu-tl.hot .node { border-color:#eb0249; box-shadow:0 0 0 5px rgba(235,2,73,.14); }
+.eu-tl .date { font-family:var(--metric-font,Metric,Arial,sans-serif); font-weight:600; font-size:22px; color:#21242c; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.eu-tl .tag { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#fff; background:#eb0249; padding:4px 11px; border-radius:30px; }
+.eu-tl .txt { color:#5f6977; margin-top:5px; font-size:17px; max-width:760px; }
+
+/* Crosswalk table */
+.eu-tablewrap { overflow-x:auto; border-radius:10px; border:1px solid #e1e5ea; }
+.eu-table { width:100%; min-width:820px; border-collapse:collapse; background:#fff; font-size:16px; }
+.eu-table th, .eu-table td { text-align:left; padding:18px 20px; vertical-align:top; }
+.eu-table thead th { background:#001f4b; color:#fff; font-family:var(--metric-font,Metric,Arial,sans-serif); font-weight:500; font-size:15px; }
+.eu-table tbody tr + tr td { border-top:1px solid #e7ebf5; }
+.eu-table tbody tr:nth-child(even) { background:#f6fbff; }
+.eu-table .art { display:inline-block; font-weight:600; font-size:14px; color:#fff; background:#054bff; padding:5px 13px; border-radius:30px; white-space:nowrap; }
+.eu-table .bnd { color:#5f6977; }
+
+/* Cross / roadmap lists */
+.eu-x { list-style:none; margin:0 0 16px; padding:0; }
+.eu-x li { position:relative; padding:6px 0 6px 30px; color:#383f55; font-size:17px; }
+.eu-x li::before { content:"\00d7"; position:absolute; left:2px; top:4px; color:#eb0249; font-weight:700; font-size:18px; }
+.eu-road { list-style:none; margin:0 0 16px; padding:0; }
+.eu-road li { position:relative; padding:6px 0 6px 30px; color:#383f55; font-size:17px; }
+.eu-road li::before { content:""; position:absolute; left:2px; top:12px; width:12px; height:12px; border-radius:3px; border:2px dashed #ff9b4b; }
+
+/* FAQ accordion (native, no JS) */
+.eu-faq { border-top:1px solid #e0e5e8; }
+.eu-faq summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 4px; font-family:var(--metric-font,Metric,Arial,sans-serif); font-weight:600; font-size:20px; color:#21242c; }
+.eu-faq summary::-webkit-details-marker { display:none; }
+.eu-faq summary::after { content:""; flex:none; width:14px; height:14px; border-right:2px solid #3d57d8; border-bottom:2px solid #3d57d8; transform:rotate(45deg); transition:transform .2s ease; margin-top:-6px; }
+.eu-faq[open] summary::after { transform:rotate(-135deg); margin-top:2px; }
+.eu-faq .ans { padding:0 4px 22px; color:#5f6977; font-size:17px; max-width:900px; }
+
+/* Body copy readability: Telerik's u-c-grey8 is a very light grey meant for
+   captions; for paragraph copy use the darker secondary slate so it reads. */
+.u-c-grey8 { color:#5f6977 !important; }
+
+/* Card top accent for capability cards */
+.eu-cap { position:relative; height:100%; }
+.eu-cap .num { color:#5d2de6; }
+.eu-artline { display:inline-block; font-weight:600; font-size:14px; color:#054bff; background:#edf4ff; border:1px solid #dcecff; padding:6px 13px; border-radius:30px; margin-bottom:14px; }
+
+/* Prefooter CTA band */
+.eu-cta { position:relative; overflow:hidden; background:#001a4b; border-radius:0; }
+.eu-cta .Section-bg img { object-fit:cover; }
+.eu-cta h2, .eu-cta p { color:#fff; }
+.eu-cta .sub { color:#c2d3ff; }
+
+@media (max-width: 900px) {
+  .eu-table { min-width:640px; }
+}

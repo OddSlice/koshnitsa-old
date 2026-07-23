@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" fill="none" viewBox="0 0 94 94">
+  <mask id="a" width="94" height="94" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+    <path fill="#fff" d="M0 0h94v94H0z" />
+  </mask>
+  <g mask="url(#a)">
+    <path fill="#62de7f" d="M94 47a47 47 0 1 1-94 0 47 47 0 0 1 94 0" />
+  </g>
+  <path stroke="#000" stroke-width="2" d="M53.408 12C69.122 15.051 81 29.114 81 46S69.122 76.949 53.408 80M40.592 12C24.878 15.051 13 29.114 13 46s11.878 30.949 27.592 34" />
+  <path stroke="#fff" stroke-width="2" d="M28.8 30.446c-3.787 4.41-6.086 10.205-6.086 16.554 0 3.412.665 6.665 1.867 9.629m46.626-11.656q.079 1.004.079 2.027c0 13.807-10.873 25-24.286 25-7.401 0-14.03-3.408-18.484-8.784" />
+  <path stroke="#fff" stroke-width="2" d="M50.962 34.653A12.3 12.3 0 0 0 47 34c-6.974 0-12.629 5.82-12.629 13S40.025 60 47 60s12.629-5.82 12.629-13c0-2.712-.807-5.229-2.186-7.312M22.714 47.886h11.657" />
+  <path stroke="#000" stroke-width="2" d="M34.365 25.646A23.66 23.66 0 0 1 47 22c10.348 0 19.184 6.662 22.682 16.047M67.4 18l-6.8 9" />
+  <path stroke="#fff" stroke-width="2" d="m65.457 60-7.771-6" />
+</svg>
